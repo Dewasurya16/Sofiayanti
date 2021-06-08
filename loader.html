@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Semangat sofia</title>
+      <link rel="stylesheet" href="css/loader.css">
+      <link rel="stylesheet" href="sweetalert2.min.css" />
+      <script src="dist/sweetalert2.all.min.js"></script>
+   </head>
+   <body>
+      <div class="container">
+         <div class="preloader">
+            <span></span>
+            <span></span>
+            <span></span>
+         </div>
+         <div class="shadow"></div>
+      </div>
+      <div class="back">
+        <button><a href="eror.html">Balik sofiaa</a></button>
+        <button><a href="quiz.html">Sini lanjut</a></button>
+      </div>
+   </body>
+   <Script>
+     Swal.fire({
+  title: 'Masiih Merasa Gak enakan?',
+  showDenyButton: true,
+  showCancelButton: true,
+  confirmButtonText: `Enakan kok`,
+  denyButtonText: `Gakkkk`,
+}).then((result) => {
+  /* Read more about isConfirmed, isDenied below */
+  if (result.isConfirmed) {
+    Swal.fire('Langsusng pencet Balik ya', '', 'success')
+  } else if (result.isDenied) {
+    Swal.fire('coba pencet Lanjut Sofia', '', 'info')
+  }
+})
+   </Script>
+</html>

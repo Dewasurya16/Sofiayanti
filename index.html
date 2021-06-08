@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>semangat</title>
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <script src="dist/sweetalert2.all.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
+  </head>
+  <body>
+    <div class="container">
+      <header>Halo Sofia Login dulu ya</header>
+      <form>
+        <div class="input-field">
+          <input type="text" required>
+          <label>Ketik Aku Istimewa</label>
+        </div>
+        <div class="input-field">
+          <input class="pswrd" type="password" required>
+          <span class="show">Lihat</span>
+          <label>Bebas Terserah kamu</label>
+        </div>
+        <div class="button">
+          <div class="inner">
+          </div>
+          <button><a href="Beranda.html">Yuk Masuk</a></button>
+        </div>
+      </form>
+      <div class="auth">Atau bisa masuk dengan tapi ga bisa di klik kwkw</div>
+      <div class="links">
+        <div class="facebook">
+          <i class="fas fa-heart"><span>Hatiku</span></i>
+        </div>
+        <div class="google">
+          <i class="fas fa-snowman"><Span>Diriku</Span></i>
+        </div>
+      </div>
+      <div class="signup">
+        yuk kalo mau lebih kesini <a href="eror.html">click dong SOF!</a>
+        Rate juga ya <a href="window.html">Clik ya</a>
+      </div>
+    </div>
+    <script>
+      var input = document.querySelector('.pswrd');
+      var show = document.querySelector('.show');
+      show.addEventListener('click', active);
+      function active(){
+        if(input.type === "password"){
+          input.type = "text";
+          show.style.color = "#1DA1F2";
+          show.textContent = "HIDE";
+        }else{
+          input.type = "password";
+          show.textContent = "SHOW";
+          show.style.color = "#111";
+        }
+      }
+      Swal.fire({
+  title: 'sedang mengahpus rasa gelisahmu dan badmodmu hehe!',
+  html: 'semoga kamu menjadi manusia kuat dalam  <b></b> milliseconds.',
+  timer: 2000,
+  timerProgressBar: true,
+  didOpen: () => {
+    Swal.showLoading()
+    timerInterval = setInterval(() => {
+      const content = Swal.getHtmlContainer()
+      if (content) {
+        const b = content.querySelector('b')
+        if (b) {
+          b.textContent = Swal.getTimerLeft()
+        }
+      }
+    }, 100)
+  },
+  willClose: () => {
+    clearInterval(timerInterval)
+  }
+}).then((result) => {
+  /* Read more about handling dismissals below */
+  if (result.dismiss === Swal.DismissReason.timer) {
+    console.log('I was closed by the timer')
+  }
+})
+    </script>
+
+  </body>
+</html>

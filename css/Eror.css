@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .container .preloader{
+    animation: rotate 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+  }
+  @keyframes rotate {
+    50%{
+      transform: rotate(360deg);
+    }
+    100%{
+      transform: rotate(720deg);
+    }
+  }
+  .preloader span{
+    position: absolute;
+    display: block;
+    height: 64px;
+    width: 64px;
+    background: #3fc1f2;
+    border: 1px solid #3fc1f2;
+    border-radius: 100%;
+  }
+  .preloader span:nth-child(1){
+    transform: translate(-28px, -28px);
+    animation: shape_1 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+  }
+  @keyframes shape_1 {
+    60%{
+      transform: scale(0.4);
+    }
+  }
+  .preloader span:nth-child(2){
+    transform: translate(28px, -28px);
+    animation: shape_2 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+  }
+  @keyframes shape_2 {
+    40%{
+      transform: scale(0.4);
+    }
+  }
+  .preloader span:nth-child(3){
+    position: relative;
+    border-radius: 0px;
+    transform: scale(0.98) rotate(-45deg);
+    animation: shape_3 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+  }
+  @keyframes shape_3 {
+    50%{
+      border-radius: 100%;
+      transform: scale(0.5) rotate(-45deg);
+    }
+    100%{
+      transform: scale(0.98) rotate(-45deg);
+    }
+  }
+  .shadow{
+    position: relative;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    height: 16px;
+    width: 64px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    border: 1px solid #d9d9d9;
+    animation: shadow 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+  }
+  @keyframes shadow {
+    50%{
+      transform: translateX(-50%) scale(0.5);
+      border-color: #f2f2f2;
+    }
+  }
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  height: 100vh;
+  background: -webkit-repeating-linear-gradient(-45deg, #71b7e6, #69a6ce, #b98acc, #ee8176, #b98acc, #69a6ce, #9b59b6);
+  background-size: 400%;
+}
+#error-page{
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  right: 15%;
+  bottom: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+}
+#error-page .content{
+  max-width: 600px;
+  text-align: center;
+}
+.content h2.header{
+  font-size: 18vw;
+  line-height: 1em;
+  position: relative;
+}
+.content h2.header:after{
+  position: absolute;
+  content: attr(data-text);
+  top: 0;
+  left: 0;
+  right: 0;
+  background: -webkit-repeating-linear-gradient(-45deg, #71b7e6, #69a6ce, #b98acc, #ee8176, #b98acc, #69a6ce, #9b59b6);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px rgba(255,255,255,0.25);
+  animation: animate 10s ease-in-out infinite;
+}
+@keyframes animate {
+  0%{
+    background-position: 0 0;
+  }
+  25%{
+    background-position: 100% 0;
+  }
+  50%{
+    background-position: 100% 100%;
+  }
+  75%{
+    background-position: 0% 100%;
+  }
+  100%{
+    background-position: 0% 0%;
+  }
+}
+.content h4{
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 2em;
+  max-width: 600px;
+  position: relative;
+}
+.content h4:after{
+  position: absolute;
+  content: attr(data-text);
+  top: 0;
+  left: 0;
+  right: 0;
+  text-shadow: 1px 1px 2px rgba(255,255,255,0.4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.content p{
+  font-size: 1.2em;
+  color: #0d0d0d;
+}
+.content .btns{
+  margin: 25px 0;
+  display: inline-flex;
+}
+.content .btns a{
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  border: 2px solid #69a6ce;
+  color: #69a6ce;
+  font-weight: 500;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.content .btns a:hover{
+  background: #69a6ce;
+  color: #fff;
+}

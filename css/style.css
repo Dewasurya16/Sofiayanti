@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  overflow: hidden;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f1f4f9, #dff1ff);
+}
+section .color {
+  position: absolute;
+  filter: blur(150px);
+}
+section .color:nth-child(1) {
+  top: -350px;
+  width: 600px;
+  height: 600px;
+  background: #0a8f8f;
+}
+section .color:nth-child(2) {
+  bottom: -150px;
+  left: 100px;
+  width: 500px;
+  height: 500px;
+  background: #d84bb5;
+}
+section .color:nth-child(3) {
+  bottom: 50px;
+  right: 100px;
+  width: 300px;
+  height: 300px;
+  background: #cc0981;
+}
+.box {
+  position: relative;
+}
+.box .square {
+  position: absolute;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  animation: animate 10s linear infinite;
+  animation-delay: calc(-1s * var(--i));
+}
+@keyframes animate {
+  0%,
+  100% {
+    transform: translateY(-40px);
+  }
+  50% {
+    transform: translateY(40px);
+  }
+}
+.box .square:nth-child(1) {
+  top: -50px;
+  right: -60px;
+  width: 100px;
+  height: 100px;
+}
+.box .square:nth-child(2) {
+  top: 150px;
+  left: -100px;
+  width: 120px;
+  height: 120px;
+  z-index: 2;
+}
+.box .square:nth-child(3) {
+  bottom: 50px;
+  right: -60px;
+  width: 80px;
+  height: 80px;
+  z-index: 2;
+}
+.box .square:nth-child(4) {
+  bottom: -80px;
+  left: 100px;
+  width: 50px;
+  height: 50px;
+}
+.box .square:nth-child(5) {
+  top: -80px;
+  left: 140px;
+  width: 60px;
+  height: 60px;
+}
+.container {
+  position: relative;
+  width: 400px;
+  min-height: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+.form {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+}
+.form h2 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+.form h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 80px;
+  height: 4px;
+  background: #fff;
+}
+.form .inputbox {
+  width: 100%;
+  margin-top: 20px;
+}
+.form .inputbox input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: rgb(71, 59, 59);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 05);
+}
+.form .inputbox input::placeholder {
+  color: rgb(0, 0, 0);
+}
+.form .inputbox input[type="submit"] {
+  background: #fff;
+  color: #666;
+  max-width: 100px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.forget {
+  margin-top: 5px;
+  color: rgb(51, 50, 50);
+}
+.forget a {
+  color: rgb(51, 50, 50);
+  font-weight: 600;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Baloo 2", cursive;
+}
+.banner-text {
+  width: 100%;
+  /* position: absolute; */
+  z-index: 1;
+}
+.banner-text ul {
+  height: 50px;
+  float: right;
+}
+.banner-text ul li {
+  display: inline-block;
+  padding: 40px 15px;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 20px;
+}
+.banner-text ul li:hover {
+  cursor: pointer;
+}
+.banner-text h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+  margin-top: 20%;
+}
+.animation-area {
+  background: linear-gradient(to left, #c14de4, #0a8f8f);
+  width: 100%;
+  height: 100vh;
+}
+.box-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.box-area li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 25px;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 20s linear infinite;
+  bottom: -150px;
+}
+.box-area li:nth-child(1) {
+  left: 86%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+.box-area li:nth-child(2) {
+  left: 12%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 1.5s;
+  animation-duration: 10s;
+}
+.box-area li:nth-child(3) {
+  left: 70%;
+  width: 100px;
+  height: 100px;
+  animation-delay: 5.5s;
+}
+.box-area li:nth-child(4) {
+  left: 42%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 15s;
+}
+.box-area li:nth-child(5) {
+  left: 65%;
+  width: 40px;
+  height: 40px;
+  animation-delay: 0s;
+}
+.box-area li:nth-child(6) {
+  left: 15%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3.5s;
+}
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-800px) rotate(360deg);
+    opacity: 0;
+  }
+}
+body {
+  background-image: none;
+  padding-top: 5em;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  color: #fff;
+  text-align: center;
+  display: inline block;
+  position: relative;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid rgb(255, 255, 255); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+.typewriter h2 {
+  color: #fff;
+  text-align: center;
+  display: inline block;
+  position: relative;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+  
+  
